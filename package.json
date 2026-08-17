@@ -1,0 +1,37 @@
+{
+  "name": "human4ai-client",
+  "version": "1.0.0",
+  "description": "Клиент службы human4ai: отдаёшь картинку капчи — получаешь строку (каскад моделей и человек в Telegram)",
+  "license": "MIT",
+  "author": "Pavel Kondratov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulislava/human4ai-client.git"
+  },
+  "keywords": ["captcha", "human4ai", "solver", "gigachat", "claude", "telegram"],
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "README.md"],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build && npm test",
+    "prepare": "npm run build",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.10.0",
+    "jest": "^30.0.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.7.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": ["<rootDir>/src"]
+  }
+}
